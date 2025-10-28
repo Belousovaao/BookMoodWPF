@@ -1,0 +1,29 @@
+﻿<Application x:Class="BookMood.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:BookMood"
+             xmlns:conv="clr-namespace:BookMood.Converters"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             StartupUri="View/MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Dark.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesign3.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.BlueGrey.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Secondary/MaterialDesignColor.Orange.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            
+            <conv:IndexToBrushConverter x:Key="IndexToBrushConverter"/>
+            <conv:NullToVisibilityConverter x:Key="NullToVisibilityConverter"/>
+            <conv:BoolToTextConverter x:Key="BoolToTextConverter" />
+
+            <x:Array x:Key="BookColors" Type="{x:Type SolidColorBrush}">
+                <SolidColorBrush Color="#34000b"/>
+                <SolidColorBrush Color="#c29b87"/>
+                <SolidColorBrush Color="#1e423f"/>
+                <SolidColorBrush Color="#2a4755"/>
+            </x:Array>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
